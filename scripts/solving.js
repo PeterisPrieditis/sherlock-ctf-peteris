@@ -1,5 +1,5 @@
 //npx hardhat compile
-//node scripts/solving.js
+//npx hardhat run scripts/solving.js
 
 const hre = require("hardhat");
 const ethers = hre.ethers;
@@ -19,9 +19,6 @@ async function main() {
     await EXPLOIT.deploy(ctf.address);
 
     console.log("After exploit  - solved:", await setup.isSolved());
-
-    //console.log("test:", await setup.test());
-    //console.log("test2:", await setup.test2());
 }
 
 main()

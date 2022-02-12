@@ -26,15 +26,6 @@ module.exports = {
   solidity: {
     compilers: [
       {
-        version: "0.8.4"
-      },
-      {
-        version: "0.4.26"
-      },
-      {
-        version: "0.6.2"
-      },
-      {
         version: "0.8.0"
       }
     ]
@@ -47,7 +38,7 @@ module.exports = {
   networks: {
     goerli: {
       url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_API_KEY_GOERLI}`,
-      gasPrice: 900000000000,
+      //gasPrice: 900000000000,
       accounts: [PRIVATE_KEY].filter((item) => item !== ""),
     },
   },

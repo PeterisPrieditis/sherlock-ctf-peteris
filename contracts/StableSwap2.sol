@@ -153,8 +153,10 @@ contract StableSwap2 is Ownable, ReentrancyGuard {
 
     function transfer(address to, uint256 amount) public returns (bool) {
         require(balances[msg.sender] >= amount, "transfer/low-balance");
-        balances[msg.sender] -= amount;
-        balances[to] += amount;
+        unchecked { 
+            balances[msg.sender] -= amount;
+            balances[to] += amount;
+        }
         return true;
     }
 

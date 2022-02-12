@@ -6,8 +6,8 @@ Kick-off presentation: https://docs.google.com/presentation/d/1f_SFUs9nP9LMgxUET
 
 | Contract               | Goerli                                                                                                                       |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| ExampleQuizExploit.sol | [0xA0331995c8Af192294A6e0E81E4D12e9C651ed57](https://goerli.etherscan.io/address/0xA0331995c8Af192294A6e0E81E4D12e9C651ed57) |
-| Setup.sol              | [0x9715B922a7ee51b4572C8EDC76251783409A8fa6](https://goerli.etherscan.io/address/0x9715B922a7ee51b4572C8EDC76251783409A8fa6) |
+| StableSwap2.sol | [0x784fDb22d7D3ba13bF7a2ae606CD1F62f8C7765e](https://goerli.etherscan.io/address/0x784fDb22d7D3ba13bF7a2ae606CD1F62f8C7765e) |
+| Setup.sol              | [0xc463cB02541bFF05BBD45154F984Be1dEe958d59](https://goerli.etherscan.io/address/0xc463cB02541bFF05BBD45154F984Be1dEe958d59) |
 
 `.env` file
 
