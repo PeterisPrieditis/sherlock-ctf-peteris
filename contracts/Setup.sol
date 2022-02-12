@@ -45,7 +45,10 @@ contract Setup is ISetup {
     }
 
     function isSolved() external view override returns (bool) {
-        return instance.totalValue() == 0;
+        uint256 totalValue = USDC.balanceOf(address(instance));
+        totalValue = USDT.balanceOf(address(instance));
+        totalValue = BUSD.balanceOf(address(instance));
+        return totalValue < 100;
     }
 
     function faucet(uint256 amount) public {

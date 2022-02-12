@@ -86,7 +86,7 @@ contract StableSwap2 is Ownable, ReentrancyGuard {
 
     function donate(uint256 amount) public nonReentrant {
         require(balances[msg.sender] >= amount, "donate/low-balance");
-        require(amount == 0, "donate/zero-amount");
+        require(amount > 0, "donate/zero-amount");
         BuyBack storage buyBack;
         buyBack.sender = address(msg.sender);
         supply -= amount;
