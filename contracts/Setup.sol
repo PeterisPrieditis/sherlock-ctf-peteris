@@ -11,9 +11,25 @@ contract Setup is ISetup {
     ERC20PresetFixedSupply public BUSD;
 
     constructor() payable {
-        USDC = new ERC20PresetFixedSupply("USDC Stablecoin","USDC",11000,address(this));
-        USDT = new ERC20PresetFixedSupply("USDT Stablecoin","USDT",10000,address(this));
-        BUSD = new ERC20PresetFixedSupply("BUSD Stablecoin","BUSD",10000,address(this));
+        require(msg.value == 0.0000374 ether);
+        USDC = new ERC20PresetFixedSupply(
+            "USDC Stablecoin",
+            "USDC",
+            11000,
+            address(this)
+        );
+        USDT = new ERC20PresetFixedSupply(
+            "USDT Stablecoin",
+            "USDT",
+            10000,
+            address(this)
+        );
+        BUSD = new ERC20PresetFixedSupply(
+            "BUSD Stablecoin",
+            "BUSD",
+            10000,
+            address(this)
+        );
         instance = new StableSwap2();
         instance.addCollateral(address(USDC));
         instance.addCollateral(address(USDT));

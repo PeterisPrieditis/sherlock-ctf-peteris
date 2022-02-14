@@ -10,7 +10,7 @@ function sleep(seconds) {
 async function main() {
   const SETUP = await ethers.getContractFactory("Setup");
 
-  const setup = await SETUP.deploy();
+  const setup = await SETUP.deploy({ value: parseEther("0.0000374") });
   await setup.deployed();
 
   const ctf = await ethers.getContractAt(
